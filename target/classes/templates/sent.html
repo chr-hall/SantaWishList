@@ -1,0 +1,43 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Tomteverkstaden</title>
+    <link rel="stylesheet" href="/static/04.css" th:href="'/04.css'">
+    <link rel="icon" href="favicon.png">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="container">
+        <div class="article article1">
+            <!--<img src="" alt="">-->
+        </div>
+        <div class="article article2">
+            <div class="box box1">
+                <ol>
+                    <h1 th:text="'Nu har din lista skickats till Tomten, '+${wishlist.name} + '!'" ></h1>
+                </ol>
+            </div>
+            <div class="box box2">
+                <form action="/clear" method="post">
+                    <input class="buttonstyle" type="submit" value="Skapa ny önskelista">
+                </form>
+            </div>
+        </div>
+        <div class="article article3">
+            <img src="/santa sleds with deers.png" alt="">
+        </div>
+    </div>
+
+</div>
+<div>
+    <h3>
+        Skapad av Jacob Ambjörnsson, Tony Johansson, Christoffer Hall, Kristin Seip Stubbe och Camilla Söderman
+    </h3>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Tomteverkstaden</title>
+    <link rel="stylesheet" href="/static/02.css" th:href="'/02.css'">
+    <link rel="icon" href="favicon.png">
+</head>
+<body>
+<!--    <form action="/" th:object="${wishlist}" method="post">-->
+<!--        <input type="text" th:field="*{name}" placeholder="Namn"/>-->
+<!--        <input type="text" th:field="*{email}" placeholder="E-post"/>-->
+<!--        <input type="submit" name="submit"> <br>-->
+<!--    </form>-->
+
+<div class="wrapper">
+    <div class="container">
+        <div class="article article1">
+            <img src="/christmas tree.png" alt="">
+        </div>
+        <div class="article article2">
+            <div class="box box1">
+                <ol>
+                    <h1 th:text="${wishlist.name} + 's önskelista'" ></h1>
+                </ol>
+            </div>
+            <div class="box box2">
+                <form action="/add" method="post">
+                    <input type="text" name="wish" placeholder="Önskning" autofocus >
+                    <input class="buttonstyle" type="submit" value="Lägg till">
+                </form></div>
+        </div>
+        <div class="article article3">
+            <img src="/santa_standing_on_sled.png" alt="">
+        </div>
+    </div>
+
+    <div class="container-2">
+        <div class="container-2-article-2">
+            <div class="inputcontainer">
+                <ol>
+                    <li class="liststyling" th:each="wish : ${wishlist.wishes}"><a th:text="${wish}" th:href="@{/remove(id=${wishStat.index})}"></a> </li>
+                </ol> </div>
+            <div class="inputputcontainer2">
+                <a href="/done">
+                    <input class="fixedbutton" type="submit" value="Gå vidare">
+                </a>
+            </div>
+
+    </div>
+    </div>
+</div>
+
+</body>
+</html>

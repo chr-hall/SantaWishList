@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Red+Hat+Display:ital,wght@0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Red+Hat+Display:ital,wght@0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Red+Hat+Display:ital,wght@0,500;1,500&display=swap');
+
+body {
+margin: auto;
+}
+
+/* ---- FONT---- */
+
+h1 {
+font-family: Nunito;
+font-size: 3rem;
+font-weight: 900;
+text-align: center;
+color: white;
+line-height: 3rem;
+transition-duration: 1s;
+margin-bottom: 48px;
+}
+
+p {
+font-family: Nunito;
+font-size: 1rem;
+color: white;
+transition-duration: 1s;
+
+}
+
+/* ---- WRAPPER ---- */
+
+.wrapper{
+width: 100%;
+}
+
+/* ---- CONTAINER ---- */
+
+.container{
+display: flex;
+justify-content: center;
+
+height: 325px;
+background-color: #a83b24;
+}
+
+
+
+
+/* ---- ARTICLES ---- */
+
+
+.article {
+width: 100px;
+height: auto;
+padding: 24px;
+flex: 0 0 33%;
+
+
+}
+
+/* ---- ARTICLE 1 ---- */
+
+.article1 {
+width: 100px;
+display: flex;
+flex-direction: column-reverse;
+align-items: center;
+position: relative;
+
+}
+
+.article1 img {
+width: 200px;
+height: 270px;
+position: absolute;
+transition-duration: 1.8s;
+margin: -100px;
+
+}
+
+
+/* ---- ARTICLE 2 ---- */
+
+.article2 {
+max-width: 400px;
+}
+
+
+.box{
+}
+
+.box1{
+}
+
+
+/* ---- ARTICLE 3 ---- */
+
+.article3 {
+width: 100px;
+display: flex;
+flex-direction: column-reverse;
+align-items: center;
+position: relative;
+}
+
+.article3 img {
+width: 200px;
+height: 300px;
+position: absolute;
+
+transition-duration: 2s;
+
+margin: -100px;
+}
+
+/* ---- FORM---- */
+
+form {
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+}
+
+input {
+padding: 12px;
+margin-top: 6px;
+width: 94%;
+border-color: none;
+border-style: hidden;
+border-radius: 4px;
+outline: none;
+}
+
+.inputbutton {
+background-color: #199017;
+width: 25%;
+border-radius: 8px;
+color: white;
+margin-top: 12px;
+font-weight: 600;
+transition-duration: 0.4s;
+}
+
+.inputbutton:hover {
+background-color: white;
+color: #199017;
+font-weight: 600;
+
+}
+
+
+
+/* ---- 02.html ---- */
+
+/* ---- CONTAINER 2 ---- */
+
+.container-2{
+display: flex;
+justify-content: center;
+align-items: center
+}
+
+/* ---- ARTICLE 2 Container 2---- */
+
+.container-2-article-2 {
+background-image: url("scroll.svg");
+width: 500px;
+height: 600px;
+
+backgroundcolor: green;
+display: flex;
+
+position: relative;
+}
+
+.inputcontainer {
+margin-top: 146px;
+display: flex;
+flex-direction: column;
+margin-left: 85px;
+flex: 0 0 90%;
+}
+
+.inputputcontainer2 {
+flex: 0 0 10%;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+
+}
+
+.fixedbutton {
+position: fixed;
+}
+
+
+.liststyling{
+font-size: 1.5rem;
+font-family: kalam;
+margin: 4px;
+
+}
+
+/* ---- BUTTON STYLE ---- */
+
+.buttonstyle {
+background-color: #199017;
+width: 100%;
+border-radius: 8px;
+color: white;
+margin-top: 12px;
+font-weight: 600;
+transition-duration: 0.4s;
+
+font-family: Nunito;
+font-size: 1rem;
+}
+
+.buttonstyle:hover {
+background-color: white;
+color: #199017;
+font-weight: 600;
+
+}
+
+button {
+background-color: #199017;
+width: 25%;
+border-radius: 8px;
+color: white;
+margin-top: 12px;
+font-weight: 600;
+transition-duration: 0.4s;
+
+font-family: Nunito;
+font-size: 1rem;
+}
+
+.buttonstyle:hover {
+background-color: white;
+color: #199017;
+font-weight: 600;
+}
+
+/* ---- BUTTON STYLE FIXED BUTTON ---- */
+
+.fixedbutton {
+background-color: #199017;
+width: 25%;
+border-radius: 8px;
+color: white;
+margin-top: 12px;
+font-weight: 600;
+transition-duration: 0.4s;
+border: solid 2px #199017;
+
+top: 400px;
+right: 50px;
+
+font-family: Nunito;
+font-size: 1rem;
+}
+
+.fixedbutton:hover {
+background-color: white;
+color: #199017;
+font-weight: 600;
+border: solid 2px #199017;
+
+}
+
+
+/* ---- BACK BUTTON STYLE ---- */
+
+.backbutton {
+width: 25%;
+border-radius: 8px;
+color: #199017;
+margin-top: 12px;
+font-weight: 600;
+transition-duration: 0.4s;
+background-color: white;
+border: solid 2px #white;
+}
+
+.backbutton:hover {
+background-color: #199017;
+color: white;
+font-weight: 600;
+border: solid 2px #white;
+
+}

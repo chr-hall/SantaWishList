@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Tomteverkstaden</title>
+    <link rel="stylesheet" href="/static/05.css" th:href="'/05.css'">
+    <link rel="icon" href="favicon.png">
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <div class="article article1">
+            <img src="/wreath_angle.png" alt="">
+        </div>
+        <div class="article article2">
+            <div class="box box1">
+                <h1>De snälla barnen.</h1>
+            </div>
+            <div class="box box2">
+            </div>
+        </div>
+        <div class="article article3">
+            <img src="/hand with gift_angle.png" alt="">
+        </div>
+    </div>
+
+    <div class="container-2">
+        <div class="container-2-article-2">
+            <div class="inputcontainer-santaslist">
+                <div class="tbl-content-santaslist">
+                    <th>Namn:</th>
+                    <th></th>
+                    <table cellpadding="0" cellspacing="0" border="0">
+                        <tbody>
+                        <tr th:each="list : ${santaslist}" >
+                            <td th:text="${list.id} + '.'"></td>
+                            <td><a class="a-wish-styling" th:href="'/santa/' + ${list.id}" th:text="${list.name}"></a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

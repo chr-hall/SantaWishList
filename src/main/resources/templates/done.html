@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Tomteverkstaden</title>
+    <link rel="stylesheet" href="/static/03.css" th:href="'/03.css'">
+    <link rel="icon" href="favicon.png">
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <div class="article article1">
+            <img src="/firework_angle.png" alt="">
+        </div>
+        <div class="article article2">
+            <div class="box box1">
+                <ol>
+                    <h1 th:text="${wishlist.name} + 's önskelista'" ></h1>
+                </ol>
+            </div>
+            <div class="box box2">
+                <a href="/sent">
+                    <input class="buttonstyle" type="submit" value="Skicka till tomten">
+                </a>
+                    <input class="backbutton" type="submit" value="Gå tillbaka" onclick="history.back()">
+            </div>
+        </div>
+        <div class="article article3">
+            <img src="/santa with deers.png" alt="">
+        </div>
+    </div>
+
+    <div class="container-2">
+        <div class="container-2-article-2">
+            <div class="inputcontainer">
+                <ol>
+                    <li class="liststyling" th:each="wish : ${wishlist.wishes}" th:text="${wish}"></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

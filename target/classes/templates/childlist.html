@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Tomteverkstaden</title>
+    <link rel="stylesheet" href="/static/06.css" th:href="'/06.css'">
+    <link rel="icon" href="favicon.png">
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <div class="article article1">
+            <img src="/sock.png" alt="">
+        </div>
+        <div class="article article2">
+            <div class="box box1">
+                <h1 th:text="${wishlist.name} + 's önskelista'" ></h1>
+            </div>
+            <div class="box box2">
+            </div>
+        </div>
+        <div class="article article3">
+            <img src="/leaf_angle.png" alt="">
+        </div>
+    </div>
+
+    <div class="container-2">
+    <div class="container-2-article-2">
+        <div class="inputcontainer">
+            <ol>
+                <li class="liststyling" th:each="wish : ${wishlist.wishes}" th:text="${wish}"></li>
+            </ol>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
+
+
+
+

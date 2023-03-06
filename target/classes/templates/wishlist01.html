@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Tomteverkstaden</title>
+    <link rel="stylesheet" href="/static/01.css" th:href="'/01.css'">
+    <link rel="icon" href="favicon.png">
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <div class="article article1">
+            <img src="/snowman.png" alt="">
+        </div>
+        <div class="article article2">
+            <div class="box box1">
+                <h1>Önskelista till tomten.</h1>
+                <p>Välkommen till Tomtens postlåda. Här kan du skriva din önskelista och skicka den till Tomten.</p>
+            </div>
+            <div class="box box2">
+                <form action="/" th:object="${wishlist}" method="post">
+                    <input type="text" th:field="*{name}" placeholder="Namn" autofocus required/>
+                    <input type="text" th:field="*{email}" placeholder="E-post" required/>
+                    <!--Titta på den här knappen senare-->
+                    <input class="inputbutton" type="submit" name="submit" value="Gå vidare"><br>
+                </form>
+            </div>
+        </div>
+        <div class="article article3">
+            <img src="/santa with Christmas tree.png" alt="">
+        </div>
+
+    </div>
+
+</div>
+
+<!--    <form action="/add" method="post">-->
+<!--        <input type="text" name="wish">-->
+<!--        <input type="submit">-->
+<!--    </form>-->
+<!--    <ol>-->
+<!--        <h1 th:unless="${wishlist.name} == null" th:text="${wishlist.name} + 's önskelista'" ></h1>-->
+<!--        <li th:each="wish : ${wishlist.wishes}" th:text="${wish}"></li>-->
+<!--    </ol>-->
+<!--    <a href="/done">-->
+<!--    <button type="submit" name="send">Gå vidare</button>-->
+<!--    </a>-->
+</body>
+</html>
